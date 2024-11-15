@@ -51,7 +51,7 @@ def useModels(uploadedFile):
         
         if uploadedFile is not None and st.button("Run Small Model"):
             generated_img = ESRGAN_trained_small.generate_image(uploadedFile)
-            st.image(generated_img, caption="Upscaled Image")
+            # st.image(generated_img, caption="Upscaled Image")
             # createImgDownload(generated_img, "output_small")
 
     # Add content to the second column
@@ -62,7 +62,7 @@ def useModels(uploadedFile):
         
         if uploadedFile is not None and st.button("Run Large Model"):
             generated_img = ESRGAN_trained_large.generate_image(uploadedFile)
-            st.image(generated_img, caption="Upscaled Image")
+            # st.image(generated_img, caption="Upscaled Image")
             # createImgDownload(generated_img, "output_large")
         
     
