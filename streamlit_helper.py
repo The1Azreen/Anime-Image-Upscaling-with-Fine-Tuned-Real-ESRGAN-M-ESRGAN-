@@ -50,12 +50,9 @@ def useModels(uploadedFile):
         st.write("A model trained on 128x128 images.")
         
         if uploadedFile is not None and st.button("Run Small Model"):
-            print("generating image on small model")
             generated_img = ESRGAN_trained_small.generate_image(uploadedFile)
-            print("image generated")
             st.image(generated_img, caption="Upscaled Image")
-            print("creating download")
-            createImgDownload(generated_img, "output_small")
+            # createImgDownload(generated_img, "output_small")
 
     # Add content to the second column
     with col2:
@@ -64,12 +61,9 @@ def useModels(uploadedFile):
         st.write("A model trained on 256x256 images.")
         
         if uploadedFile is not None and st.button("Run Large Model"):
-            print("generating image on large model")
             generated_img = ESRGAN_trained_large.generate_image(uploadedFile)
-            print("image generated")
             st.image(generated_img, caption="Upscaled Image")
-            print("creating download")
-            createImgDownload(generated_img, "output_large")
+            # createImgDownload(generated_img, "output_large")
         
     
     
