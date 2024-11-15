@@ -10,6 +10,7 @@ class ESRGAN_Wrapper:
     def __init__(self, model_path=None) -> None:
         # Create an instance of the model
         model = RRDBNet(3, 3, 64, 23)
+        model.to('cpu')
         model.eval()
 
         # Load the model without checkpoint
@@ -30,12 +31,18 @@ class ESRGAN_Wrapper:
             transforms.ToTensor()
         ])
         
+        # Quantize the model to reduce its precision and make it faster. PyTorch supports dynamic quantization, which is simple to apply and effective on CPUs.
+        self.model = torch.quantization.quantize_dynamic(
+            self.model, {torch.nn.Linear}, dtype=torch.qint8
+        )
+        
     def generate_image(self, file):
         self.model.eval()
         img = Image.open(file).convert("RGB")
         img_tensor = self.transform(img)
         img_tensor = img_tensor.unsqueeze(0)
-        output = self.model(img_tensor)
+        with torch.no_grad():
+            output = self.model(img_tensor)
         output = torch.clamp(output, 0, 1) 
         output_pil = transforms.ToPILImage()(output.squeeze(0))
         return output_pil
