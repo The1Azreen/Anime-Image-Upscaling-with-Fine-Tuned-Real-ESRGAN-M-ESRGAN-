@@ -4,8 +4,8 @@ from PIL import Image
 import io
 
 # Shared variables
-ESRGAN_trained_small = ESRGAN_Wrapper("models/small.pth")
-ESRGAN_trained_large = ESRGAN_Wrapper("models/large.pth")
+ESRGAN_trained_small = ESRGAN_Wrapper("models/small.pth", small=True)
+ESRGAN_trained_large = ESRGAN_Wrapper("models/large.pth", small=False)
 
 def init():
     # Set page to wide layout
@@ -44,20 +44,20 @@ def useModels(uploadedFile):
     
     # Add content to the first column
     with col1:
-        st.header("Small Model")
-        st.write("A model trained on 128x128 images.")
+        st.header("Model 1")
+        st.write("Trained on 128x128 images.")
         
-        if uploadedFile is not None and st.button("Run Small Model"):
+        if uploadedFile is not None and st.button("Run Model 1"):
             generated_img = ESRGAN_trained_small.generate_image(uploadedFile)
             st.image(generated_img, caption="Upscaled Image")
             createImgDownload(generated_img, "output_small")
 
     # Add content to the second column
     with col2:
-        st.header("Large Model")
-        st.write("A model trained on 256x256 images.")
+        st.header("Model 2")
+        st.write("Trained on 256x256 images.")
         
-        if uploadedFile is not None and st.button("Run Large Model"):
+        if uploadedFile is not None and st.button("Run Model 2"):
             generated_img = ESRGAN_trained_large.generate_image(uploadedFile)
             st.image(generated_img, caption="Upscaled Image")
             createImgDownload(generated_img, "output_large")

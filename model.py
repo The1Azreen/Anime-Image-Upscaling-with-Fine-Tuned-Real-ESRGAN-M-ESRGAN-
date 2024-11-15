@@ -3,14 +3,11 @@ import torch
 import torchvision.transforms as transforms
 from PIL import Image
 
-transform = transforms.Compose([
-            transforms.ToTensor()
-        ])
-
 class ESRGAN_Wrapper:
     model: RRDBNet
+    transform: transforms
     
-    def __init__(self, model_path=None) -> None:
+    def __init__(self, model_path=None, small: bool = False) -> None:
         # Create an instance of the model
         model = RRDBNet(3, 3, 64, 23)
         model.to('cpu')
@@ -30,19 +27,29 @@ class ESRGAN_Wrapper:
             
         self.model = model
         
+        if small:
+            self.transform = transforms.Compose([
+                transforms.Resize((128, 128)),
+                transforms.ToTensor()
+                ])
+        else:
+            self.transform = transforms.Compose([
+                transforms.Resize((256, 256)),
+                transforms.ToTensor()
+                ])
+        
         # Quantize the model to reduce its precision and make it faster. PyTorch supports dynamic quantization, which is simple to apply and effective on CPUs.
         self.model = torch.quantization.quantize_dynamic(
             self.model, {torch.nn.Linear}, dtype=torch.qint8
         )
         
     def generate_image(self, file):
-        self.model.eval()
         img = Image.open(file).convert("RGB")
-        img_tensor = transform(img)
+        img_tensor = self.transform(img)
         img_tensor = img_tensor.unsqueeze(0)
         with torch.no_grad():
             output = self.model(img_tensor)
-        output = torch.clamp(output, 0, 1) 
+        output = torch.clamp(output, 0, 1)
         output_pil = transforms.ToPILImage()(output.squeeze(0))
         return output_pil
         
