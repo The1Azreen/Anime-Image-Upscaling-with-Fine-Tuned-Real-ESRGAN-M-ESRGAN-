@@ -1,4 +1,4 @@
-# Anime Image Upscaling with Fine-Tuned Real-ESRGAN
+# Anime Image Upscaling with Fine-Tuned Real-ESRGAN (M-ERSGAN)
 Muhammad Hafiz Bin Abdul Halim : 
 
 Muhammad Azreen Bin Muhammad : azreen654@gmail.com
