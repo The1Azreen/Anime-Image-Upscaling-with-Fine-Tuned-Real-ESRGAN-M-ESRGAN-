@@ -12,11 +12,12 @@ Our goal is to fine-tune the R-ESRGAN model specifically for anime and anime ups
 ## Methodology/Proposed Approach
 
 1. **Dataset Preparation**  
-   - We sourced our image dataset from existing anime content.  
+   - We sourced our image dataset from existing anime content.
    - The size of the dataset is subject to change over the duration of the project.  
 
 2. **Data Annotation and Preprocessing**  
-   - Annotate the dataset for relevant features.  
+   - Annotate the dataset for relevant features.
+   - We run the Python code in the imageGenCode folder to annotate the images in 3 Categories
    - Generate low-resolution image variants to simulate input for the model.
 
 ---
