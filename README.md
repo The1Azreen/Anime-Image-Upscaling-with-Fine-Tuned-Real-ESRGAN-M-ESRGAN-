@@ -1,6 +1,8 @@
 # Anime Image Upscaling with Fine-Tuned Real-ESRGAN
 Muhammad Hafiz Bin Abdul Halim : 
+
 Muhammad Azreen Bin Muhammad : azreen654@gmail.com
+
 Muhammad Firdauz Bin Kamarulzaman : email@firdauzbk.com
 
 
