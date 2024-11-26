@@ -1,5 +1,7 @@
 # Anime Image Upscaling with Fine-Tuned Real-ESRGAN
+Muhammad Hafiz Bin Abdul Halim : 
 Muhammad Azreen Bin Muhammad : azreen654@gmail.com
+Muhammad Firdauz Bin Kamarulzaman : email@firdauzbk.com
 
 
 ## Project Description
@@ -26,6 +28,8 @@ Our goal is to fine-tune the R-ESRGAN model specifically for anime and anime ups
    - Annotate the dataset for relevant features.
    - We run the Python code in the imageGenCode folder to annotate the images in 3 Categories
    - Generate low-resolution image variants to simulate input for the model.
+  
+
 
 
 ---
