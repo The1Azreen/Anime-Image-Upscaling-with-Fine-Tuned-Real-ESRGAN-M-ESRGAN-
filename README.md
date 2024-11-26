@@ -49,7 +49,7 @@ Below is a comparison between a low-quality anime image and its upscaled version
 ---
 
 
-## How to Use
+## How to Use (Upscaling App)
 
 1. **Clone the Repository**  
    ```bash
@@ -59,3 +59,29 @@ Below is a comparison between a low-quality anime image and its upscaled version
 2. **Run the application through Streamlit**
    ```bash
    streamlit run streamlit_app.py
+
+## How to Use (Image Generation for Training)
+
+* **How to generate images for training.**
+   - Image generation only works with `.mkv` files.
+   - Animes should be stored as below.
+   - First run `frames_extract.py`, then `frames_downsample.py`, then `frames_gen_csv.py`.
+   ```markdown
+   imageGenCode/
+   ├── anime1/
+   │   ├── episode1.mkv
+   │   ├── episode2.mkv
+   │   └── episode3.mkv
+   ├── anime2/
+   │   ├── episode1.mkv
+   │   ├── episode2.mkv
+   │   └── episode3.mkv
+   ├── anime3/
+   │   ├── episode1.mkv
+   │   ├── episode2.mkv
+   │   └── episode3.mkv
+   ├── frames_downsample.py
+   ├── frames_extract.py
+   ├── frames_gen_csv.py
+   └── frames_rename.py
+   ```
