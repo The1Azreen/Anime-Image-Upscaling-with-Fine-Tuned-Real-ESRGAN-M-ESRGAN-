@@ -53,8 +53,7 @@ Below is a comparison between a low-quality anime image and its upscaled version
 
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   git clone https://github.com/dragonstonehafiz/aai3001-large-project.git
    
 2. **Run the application through Streamlit**
    ```bash
