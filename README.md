@@ -1,4 +1,6 @@
 # Anime Image Upscaling with Fine-Tuned Real-ESRGAN
+Muhammad Azreen Bin Muhammad : azreen654@gmail.com
+
 
 ## Project Description
 
