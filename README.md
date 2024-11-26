@@ -43,7 +43,9 @@ Below is a comparison between a low-quality anime image and its upscaled version
 | Low-Quality Image                          | Upscaled Image                 |
 |--------------------------------------------|--------------------------------|
 | <img src="sample_images/Amiya_Original-256x256.png" width="1024"/> | <img src="sample_images/Amiya_Original-Upscaled.png" width="1024"/> |
-
+| <img src="sample_images/makeine-256x256.png" width="1024"/> | <img src="sample_images/makeine-Upscaled.png" width="1024"/> |
+| <img src="sample_images/aobuta-256x256.png" width="1024"/> | <img src="sample_images/aobuta-Upscaled.png" width="1024"/> |
+| <img src="sample_images/destiny2-256x256.png" width="1024"/> | <img src="sample_images/destiny2-Upscaled.png" width="1024"/> |
 ---
 
 
