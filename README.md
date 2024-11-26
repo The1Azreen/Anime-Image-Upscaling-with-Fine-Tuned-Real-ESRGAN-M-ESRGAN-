@@ -26,12 +26,12 @@ Our goal is to fine-tune the R-ESRGAN model specifically for anime and anime ups
 
 Below is a comparison between a low-quality anime image and its upscaled version using our fine-tuned model:
 
-| Low-Quality Image | Upscaled Image |
-|--------------------|----------------|
-| ![Low Quality](aai3001-large-project/sample_images
-/Amiya_Original-256x256.png) | ![Upscaled](insert_upscaled_image_path_here) |
+| Low-Quality Image                          | Upscaled Image                 |
+|--------------------------------------------|--------------------------------|
+| ![Low Quality](aai3001-large-project/sample_images/Amiya_Original-256x256.png) | ![Upscaled](insert_upscaled_image_path_here) |
 
 ---
+
 
 ## How to Use
 
