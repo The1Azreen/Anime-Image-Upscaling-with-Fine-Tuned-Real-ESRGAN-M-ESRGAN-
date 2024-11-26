@@ -55,3 +55,7 @@ Below is a comparison between a low-quality anime image and its upscaled version
    ```bash
    git clone https://github.com/yourusername/yourrepository.git
    cd yourrepository
+   
+2. **Run the application through Streamlit**
+   ```bash
+   streamlit run streamlit_app.py
