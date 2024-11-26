@@ -3,6 +3,8 @@ import torch
 import torchvision.transforms as transforms
 from PIL import Image
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 class ESRGAN_Wrapper:
     model: RRDBNet
     transform: transforms
@@ -10,7 +12,7 @@ class ESRGAN_Wrapper:
     def __init__(self, model_path=None, small: bool = False) -> None:
         # Create an instance of the model
         model = RRDBNet(3, 3, 64, 23)
-        model.to('cpu')
+        model.to(device)
         model.eval()
 
         # Load the model without checkpoint
@@ -45,7 +47,7 @@ class ESRGAN_Wrapper:
         
     def generate_image(self, file):
         img = Image.open(file).convert("RGB")
-        img_tensor = self.transform(img)
+        img_tensor = self.transform(img).to(device)
         img_tensor = img_tensor.unsqueeze(0)
         with torch.no_grad():
             output = self.model(img_tensor)
