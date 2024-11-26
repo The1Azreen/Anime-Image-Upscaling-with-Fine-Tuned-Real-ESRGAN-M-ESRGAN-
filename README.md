@@ -32,7 +32,7 @@ Our goal is to fine-tune the R-ESRGAN model specifically for anime and anime ups
    - Generate low-resolution image variants to simulate input for the model.
   
 
-<img src="sample_images/chart.png">
+<img src="sample_images/Chart.png">
 
 ---
 
