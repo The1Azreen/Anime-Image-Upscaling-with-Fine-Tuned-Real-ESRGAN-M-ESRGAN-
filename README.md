@@ -28,7 +28,7 @@ Below is a comparison between a low-quality anime image and its upscaled version
 
 | Low-Quality Image                          | Upscaled Image                 |
 |--------------------------------------------|--------------------------------|
-| ![Low Quality](aai3001-large-project/sample_images/Amiya_Original-256x256.png) | ![Upscaled](insert_upscaled_image_path_here) |
+| ![Low Quality](sample_images/Amiya_Original-256x256.png) | ![Upscaled](insert_upscaled_image_path_here) |
 
 ---
 
