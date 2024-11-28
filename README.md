@@ -60,7 +60,8 @@ Below is a comparison between a low-quality anime image and its upscaled version
    streamlit run streamlit_app.py
 
 3. **Example Usage**
-   [![Video Link](sample_images\makeine-upscaled.png)](https://youtu.be/zZiL5X7dj4A?si=0ImNYT7CJmsfBnHC)
+   
+   [Video Link](https://youtu.be/zZiL5X7dj4A?si=0ImNYT7CJmsfBnHC)
 
 ## How to Use (Image Generation for Training)
 
