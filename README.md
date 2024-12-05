@@ -1,5 +1,5 @@
-# Anime Image Upscaling with Fine-Tuned Real-ESRGAN (M-ERSGAN)
-Muhammad Hafiz Bin Abdul Halim : dragonstonehafiz@gmail.com
+# Anime Image Upscaling with Fine-Tuned Real-ESRGAN (M-ESRGAN)
+[Muhammad Hafiz Bin Abdul Halim](https://github.com/dragonstonehafiz) : dragonstonehafiz@gmail.com
 
 [Muhammad Azreen Bin Muhammad](https://github.com/The1Azreen) : azreen654@gmail.com
 
@@ -12,6 +12,7 @@ Muhammad Firdauz Bin Kamarulzaman : email@firdauzbk.com
 In this project, we explored a variety of Deep Learning models to upscale anime images.  
 After thorough testing and comparison, the R-ESRGAN 4x model demonstrated the best results.  
 Our goal is to fine-tune the R-ESRGAN model specifically for anime and anime upscaling tasks.
+No modifications were made to the original model (which can be found [here](https://github.com/xinntao/ESRGAN)), we only trained it on our own data.
 
 ---
 
@@ -88,3 +89,7 @@ Below is a comparison between a low-quality anime image and its upscaled version
    ├── frames_gen_csv.py
    └── frames_rename.py
    ```
+
+## References
+
+- [ESRGAN Github Repository](https://github.com/xinntao/ESRGAN)
