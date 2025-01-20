@@ -12,7 +12,7 @@ Muhammad Firdauz Bin Kamarulzaman : email@firdauzbk.com
 In this project, we explored a variety of Deep Learning models to upscale anime images.  
 After thorough testing and comparison, the R-ESRGAN 4x model demonstrated the best results.  
 Our goal is to fine-tune the R-ESRGAN model specifically for anime and anime upscaling tasks.
-No modifications were made to the original model (which can be found [here](https://github.com/xinntao/ESRGAN)), we only trained it on our own data.
+No modifications were made to the original model (which can be found [here](https://github.com/xinntao/ESRGAN)), we only trained it on our own data. (Adversial test build undergoing fine tuning)
 
 ---
 
